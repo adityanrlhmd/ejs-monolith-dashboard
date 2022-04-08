@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('partials/head'); %>
+    <title>Binar Car Rental</title>
+</head>
+
+<body>
+    <div class="d-flex wrapper" id="wrapper">
+
+        <!-- Sidebar-->
+        <%- include('partials/sidebar-car'); %>
+
+        <!-- Page content wrapper-->
+        <div class="page-content-wrapper" id="page-content-wrapper">
+
+            <!-- Top navigation-->
+            <%- include('partials/navbar'); %>
+
+            <!-- Page content-->
+            <div class="content container-fluid ">
+
+                <p class="link-page my-4">
+                    Cars <i class="fa-solid fa-angle-right ms-1"></i> <span>List Car</span>
+                </p>
+                <div class="d-flex mb-4">
+                    <h1 class="title">List Car</h1>
+                    <a href="/addCar" class="btn btn-add ms-auto"><i class="fa-solid fa-plus me-2"></i> Add New Car</a>
+                </div>
+                <div class="d-flex filter-car mb-4">
+                    <a href="#" class="btn btn-filter me-3"
+                        style="border: 1px solid #0D28A6; color:#0D28A6; background: #CFD4ED;">All</a>
+                    <a href="#" class="btn btn-filter me-3">Small</a>
+                    <a href="#" class="btn btn-filter me-3">Medium</a>
+                    <a href="#" class="btn btn-filter">Large</a>
+                </div>
+
+                <div class="wrap-cars mb-4">
+                    <div class="row g-4">
+                        <% car.forEach(item => { %>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="wrap-img-car">
+                                    <img class="mx-auto d-block w-100" src="/images/image-car.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="name-car mb-3">
+                                        <%- item.name %>
+                                    </h4>
+                                    <h3 class="price-car mb-3">
+                                        <% 
+                                            var price = item.price;
+                                            
+                                            var number_string = price.toString(),
+                                            sisa 	= number_string.length % 3,
+                                            rupiah 	= number_string.substr(0, sisa),
+                                            ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
+
+                                            if (ribuan) {
+                                                separator = sisa ? '.' : '';
+                                                rupiah += separator + ribuan.join('.');
+                                            }
+                                        %>
+                                        Rp <%= rupiah %> / hari
+                                    </h3>
+                                    <div class="d-flex date-rent mb-3">
+                                        <img class="my-auto" style="margin-right: 8px; width: 20px; height: 20px;" src="/images/fi_key.png" alt="">
+                                        <p class="m-0"><%= item.start_rent %> - <%= item.finish_rent %></p>
+                                    </div>
+                                    <div class="d-flex date-update mb-3">
+                                        <img style="margin-right: 8px; width: 20px;" src="/images/fi_clock.png" alt="">
+                                        <p class="m-0"><%= item.updated_at %></p>
+                                    </div>
+                                    <div class="row btn-action">
+                                        <div class="col-md-6">
+                                            <a href="#modalDelete<%=item.id%>" class="btn btn-outline-danger w-100" data-bs-toggle="modal"
+                                                data-bs-target="#deleteCar">
+                                                <i class="fa-solid fa-trash"></i> Delete
+                                            </a>
+                                            <div class="modal fade" id="modalDelete<%=item.id%>" tabindex="-1"
+                                                aria-labelledby="deleteCarLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body text-center">
+                                                            <img class="mb-4" src="/images/img-BeepBeep.png" alt="">
+                                                            <h3 class="mb-3">Menghapus Data Mobil</h3>
+                                                            <p class="mb-4">Setelah dihapus, data mobil tidak dapat
+                                                                dikembalikan. Yakin ingin menghapus?</p>
+                                                            <div class="d-flex justify-content-center">
+                                                                <a href="/cars/delete/<%- item.id %>" class="btn btn-primary me-3 w-100">Ya</a>
+                                                                <a class="btn btn-outline-primary w-100" data-dismiss="modal">Tidak</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href='/list/update/<%=item.id%>' class="btn btn-success w-100">
+                                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/script'); %>
+</body>
+
+</html>

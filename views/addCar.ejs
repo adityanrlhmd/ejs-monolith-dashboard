@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('partials/head'); %>
+    <title>Binar Car Rental</title>
+</head>
+
+<body>
+    <div class="d-flex wrapper" id="wrapper">
+
+        <!-- Sidebar-->
+        <%- include('partials/sidebar-car'); %>
+
+        <!-- Page content wrapper-->
+        <div class="page-content-wrapper" id="page-content-wrapper">
+
+            <!-- Top navigation-->
+            <%- include('partials/navbar'); %>
+
+            <!-- Page content-->
+            <div class="content container-fluid ">
+
+                <p class="link-page my-4">
+                    Cars <i class="fa-solid fa-angle-right ms-1 me-1"></i> List Car <i
+                        class="fa-solid fa-angle-right ms-1"></i> <span>Add New Car</span>
+                </p>
+                <h1 class="title mb-5">Add New Car</h1>
+
+                <form action="/addCar" method="post">
+                    <div class="wrap-form mb-5">
+                        <div class="container-fluid">
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3">
+                                    <label for="inputName" class="col-form-label">Nama<span
+                                            style="color: red;">*</span></label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" id="inputName" class="form-control"
+                                        aria-describedby="nameHelpInline" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3">
+                                    <label for="inputHarga" class="col-form-label">Harga<span
+                                            style="color: red;">*</span></label>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="number" id="inputHarga" class="form-control"
+                                        aria-describedby="hargaHelpInline" placeholder="Placeholder">
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3 mt-0">
+                                    <label for="inputFoto" class="col-form-label">Foto<span
+                                            style="color: red;">*</span></label>
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="fotoUpload" id="#fileUpload" class="form-control label-upload d-flex"
+                                        style="cursor: pointer;">
+                                        Placeholder <i class="fa-solid fa-arrow-up-from-bracket ms-auto my-auto"></i>
+                                    </label>
+                                    <input id="fotoUpload" name="fotoName" type="file" style="display:none;">
+                                    <div id="fotoHelpBlock" class="form-text">
+                                        File size max. 2MB
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3 ">
+                                    <label class="col-form-label">Start Rent</label>
+                                </div>
+                                <div class="col-md-5">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3 ">
+                                    <label class="col-form-label">Finish Rent</label>
+                                </div>
+                                <div class="col-md-5">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center mb-3">
+                                <div class="col-md-3 ">
+                                    <label class="col-form-label">Created at</label>
+                                </div>
+                                <div class="col-md-5">
+                                    -
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-center pb-3">
+                                <div class="col-md-3 ">
+                                    <label class="col-form-label">Uploaded at</label>
+                                </div>
+                                <div class="col-md-5">
+                                    -
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex btn-action-add mb-3">
+                        <a href="/cars" class="btn btn-outline-primary me-3">Cancel</a>
+                        <a href="#" class="btn btn-primary">Save</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/script'); %>
+
+    <!-- <script type="text/javascript">
+        var fileInput = $('#fotoUpload');
+
+        fileInput.change(function () {
+            $this = $(this);
+            $('#fileUpload').text($this.val());
+        })
+
+        $('#fileUpload').click(function () {
+            fileInput.click();
+        }).show();
+    </script> -->
+</body>
+
+</html>

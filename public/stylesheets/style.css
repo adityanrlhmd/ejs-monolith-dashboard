@@ -1,0 +1,240 @@
+.page-content-wrapper {
+  background: #c5c3c32a;
+}
+
+.link-page {
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.link-page span {
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.title {
+  font-family: Helvetica;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.child-title {
+  border-left: 4px solid #0D28A6;
+  padding-left: 7px;
+}
+
+.child-title h3 {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.table thead {
+  background: #CFD4ED;
+}
+
+.table tbody {
+  background: #fdfdfd;
+}
+
+.table tbody:first-child {
+  border-top: none;
+}
+
+.link-page .row .list-select .form-select {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #8A8A8A;
+}
+
+.link-page .row .list-select .btn {
+  font-size: 14px;
+}
+
+.pagination .page-item .page-link {
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #8A8A8A;
+  text-decoration: none;
+}
+
+.btn-add {
+  background: #0D28A6;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: white;
+}
+
+.btn-add:hover {
+  color: white;
+}
+
+.filter-car .btn-filter {
+  border: 1px solid #AEB7E1;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #AEB7E1;
+  background: white;
+}
+
+.btn-filter:hover {
+  border: 1px solid #0D28A6;
+  color: #0D28A6;
+  background: #CFD4ED;
+}
+
+.wrap-img-car {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.wrap-img-car img {
+  margin: 31px 17px;
+}
+
+.card-body {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.name-car {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.price-car {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.date-rent p {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.date-update p {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.btn-action a {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.modal-body {
+  padding: 1rem 2rem;
+}
+
+.modal-body h3 {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.modal-body p {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.modal-body .d-flex {
+  padding: 0 4rem;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 387px;
+    margin: 1.5rem auto;
+  }
+}
+
+.wrap-form {
+  background-color: white;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.label-upload {
+  font-family: Helvetica;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  color: gray;
+}
+
